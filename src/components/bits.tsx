@@ -92,14 +92,12 @@ export function Reveal({
   children,
   delay = 0,
   className = "",
-  as: As = "div",
 }: {
   children: ReactNode;
   delay?: number;
   className?: string;
-  as?: "div" | "section" | "li" | "article" | "header";
 }) {
-  const ref = useRef<HTMLElement | null>(null);
+  const ref = useRef<HTMLDivElement | null>(null);
   const [shown, setShown] = useState(false);
 
   useEffect(() => {
@@ -121,8 +119,7 @@ export function Reveal({
   }, []);
 
   return (
-    // @ts-expect-error dynamic tag with ref
-    <As
+    <div
       ref={ref}
       className={`transition-[opacity,transform] duration-[900ms] [transition-timing-function:cubic-bezier(0.22,1,0.36,1)] ${
         shown ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
@@ -130,9 +127,10 @@ export function Reveal({
       style={{ transitionDelay: `${delay}ms` }}
     >
       {children}
-    </As>
+    </div>
   );
 }
+
 
 export function Eyebrow({
   children,
