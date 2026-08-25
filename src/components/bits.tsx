@@ -30,7 +30,6 @@ function inner(children: ReactNode, icon?: ReactNode) {
 export function GLink({
   to,
   params,
-  hash,
   children,
   tone = "glass",
   icon,
@@ -38,7 +37,6 @@ export function GLink({
 }: BaseProps & {
   to: string;
   params?: Record<string, string>;
-  hash?: string;
 }) {
   return (
     <Link
@@ -46,8 +44,8 @@ export function GLink({
       to={to as any}
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
       params={params as any}
-      hash={hash}
       className={`gbtn ${toneClass[tone]} ${className}`}
+
     >
       {inner(children, icon)}
     </Link>
