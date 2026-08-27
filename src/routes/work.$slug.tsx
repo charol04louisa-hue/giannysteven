@@ -35,7 +35,7 @@ export const Route = createFileRoute("/work/$slug")({
 });
 
 function ProjectPage() {
-  const { t } = useLang();
+  const { t, tl } = useLang();
   const { index } = Route.useLoaderData();
   const p = projects[index]!;
   const prev = projects[(index - 1 + projects.length) % projects.length]!;
@@ -115,7 +115,7 @@ function ProjectPage() {
             <p className="display-md mt-4 text-navy">{t(p.intro)}</p>
           </div>
           <div className="space-y-5 lg:col-span-7 lg:col-start-6">
-            {t(p.body).map((para) => (
+            {tl(p.body).map((para: string) => (
               <p key={para} className="text-base leading-relaxed text-ink/75 sm:text-lg">
                 {para}
               </p>
