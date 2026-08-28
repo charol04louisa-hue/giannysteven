@@ -70,11 +70,15 @@ export function AboutBlock() {
               >
                 {site.instagram}
               </a>
-              {site.phones.map((p) => (
-                <p key={p} className="mt-2 font-mono text-xs text-ink/60">
-                  {p}
-                </p>
-              ))}
+              <p className="mt-2 font-mono text-xs text-ink/60">{site.phones[0]}</p>
+              <a
+                href={site.whatsappUrl}
+                target="_blank"
+                rel="noreferrer"
+                className="mt-2 block text-sm text-navy underline decoration-yellow decoration-2 underline-offset-4"
+              >
+                WhatsApp
+              </a>
             </div>
           </div>
         </Reveal>
