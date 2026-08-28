@@ -21,7 +21,17 @@ type Ctx = {
   tl: (v: BiList) => string[];
 };
 
-const LangContext = createContext<Ctx | null>(null);
+// Keep a single context instance even if this module is duplicated across
+// build chunks (route code-splitting can otherwise create two contexts,
+// making useLang throw inside a valid provider tree).
+const globalStore = globalThis as typeof globalThis & {
+  __gsLangContext?: React.Context<Ctx | null>;
+};
+
+const LangContext: React.Context<Ctx | null> =
+  globalStore.__gsLangContext ?? createContext<Ctx | null>(null);
+
+globalStore.__gsLangContext = LangContext;
 
 export function LangProvider({ children }: { children: ReactNode }) {
   const [lang, setLangState] = useState<Lang>("id");
