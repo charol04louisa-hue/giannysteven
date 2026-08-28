@@ -5,8 +5,10 @@ export const site = {
   fullName: "Gianny Steven Aipassa",
   email: "giany02steven@gmail.com",
   instagram: "@gianyaipassa07",
-  instagramUrl: "https://instagram.com/gianyaipassa07",
-  phones: ["+62 856 4375 2684", "+62 822 2342 0471"],
+  instagramUrl:
+    "https://www.instagram.com/giannyaipassa?utm_source=ig_web_button_share_sheet&igsi=ZDNlZDc0MzIxNw==",
+  phones: ["+62 856 4375 2684"],
+  whatsappUrl: "https://wa.link/5fx10l",
 };
 
 export const ui = {
@@ -41,6 +43,7 @@ export const ui = {
     viewAll: { id: "Lihat Semua", en: "View All" } satisfies Bi,
     contactMe: { id: "Hubungi Saya", en: "Contact Me" } satisfies Bi,
     emailMe: { id: "Kirim Email", en: "Email Me" } satisfies Bi,
+    letsWorkTogether: { id: "Mari Bekerja Sama!", en: "LET'S WORK TOGETHER" } satisfies Bi,
     playVideo: { id: "Putar Video", en: "Play Video" } satisfies Bi,
     prevProject: { id: "Proyek Sebelumnya", en: "Previous Project" } satisfies Bi,
     nextProject: { id: "Proyek Berikutnya", en: "Next Project" } satisfies Bi,
