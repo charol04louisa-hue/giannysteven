@@ -96,7 +96,7 @@ export function Nav() {
               aria-label={open ? "Close menu" : "Open menu"}
               className="glass grid size-11 shrink-0 place-items-center rounded-full text-white lg:hidden"
             >
-              {open ? <Menu className="size-5" /> : <Menu className="size-5" />}
+              {open ? <X className="size-5" /> : <Menu className="size-5" />}
             </button>
           </div>
         </nav>
