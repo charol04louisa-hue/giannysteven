@@ -65,7 +65,7 @@ export function AboutBlock() {
               <a
                 href={site.instagramUrl}
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 className="mt-2 block text-sm text-navy underline decoration-yellow decoration-2 underline-offset-4"
               >
                 {site.instagram}
@@ -74,7 +74,7 @@ export function AboutBlock() {
               <a
                 href={site.whatsappUrl}
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 className="mt-2 block text-sm text-navy underline decoration-yellow decoration-2 underline-offset-4"
               >
                 WhatsApp
