@@ -8,7 +8,8 @@ export const site = {
   instagramUrl:
     "https://www.instagram.com/giannyaipassa?utm_source=ig_web_button_share_sheet&igsi=ZDNlZDc0MzIxNw==",
   phones: ["+62 856 4375 2684"],
-  whatsappUrl: "https://wa.link/5fx10l",
+  whatsappUrl:
+    "https://wa.me/6285643752684?text=Hi%2C%20I%27m%20interested%20in%20working%20with%20you.%20Let%27s%20discuss%20the%20project!",
 };
 
 export const ui = {

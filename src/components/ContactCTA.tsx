@@ -53,8 +53,8 @@ export function ContactCTA() {
               <div>
                 <dt className="eyebrow text-white/45">WhatsApp</dt>
                 <dd className="mt-1 text-sm text-white">
-                  <a href={site.whatsappUrl} target="_blank" rel="noreferrer" className="hover:text-yellow">
-                    wa.link/5fx10l
+                <a href={site.whatsappUrl} target="_blank" rel="noopener noreferrer" className="hover:text-yellow">
+                    +62 856 4375 2684
                   </a>
                 </dd>
               </div>

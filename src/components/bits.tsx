@@ -64,7 +64,7 @@ export function GAnchor({
     <a
       href={href}
       target={external ? "_blank" : undefined}
-      rel={external ? "noreferrer" : undefined}
+      rel={external ? "noopener noreferrer" : undefined}
       className={`gbtn ${toneClass[tone]} ${className}`}
     >
       {inner(children, icon)}
